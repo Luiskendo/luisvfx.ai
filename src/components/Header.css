@@ -1,0 +1,53 @@
+/* --- ENCABEZADO (copiado del prototipo) --- */
+header {
+  position: fixed;
+  top: 0; left: 0; width: 100%; padding: 16px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+  background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border); z-index: 100;
+  opacity: 0; transform: translateY(-100%);
+  transition: all 0.4s ease; pointer-events: none;
+}
+
+header.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+.header-logo img {
+  height: 38px; width: 38px; object-fit: cover; border-radius: 50%;
+  mix-blend-mode: screen; border: 1px solid var(--border);
+  /* Glow blanco sutil para que resalte sobre el fondo oscuro */
+  filter: drop-shadow(0 0 6px rgba(245, 245, 245, 0.35)) drop-shadow(0 0 14px rgba(245, 245, 245, 0.15));
+}
+
+.nav-links { display: flex; gap: 32px; }
+.nav-links a {
+  color: var(--muted); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: color 0.3s ease; position: relative;
+}
+.nav-links a:hover, .nav-links a.active { color: var(--text); }
+.nav-links a.active::after {
+  content: ''; position: absolute; bottom: -6px; left: 50%; transform: translateX(-50%);
+  width: 4px; height: 4px; background-color: var(--accent); border-radius: 50%;
+}
+
+/* En escritorio solo se ve el texto; el número queda oculto */
+.nav-num { display: none; }
+
+.header-wa-btn {
+  display: inline-flex; align-items: center; padding: 10px 20px; background-color: transparent;
+  color: var(--wa-green); font-weight: 600; font-size: 0.9rem; border: 1px solid var(--wa-green);
+  border-radius: 50px; text-decoration: none; transition: all 0.3s ease; animation: pulse-wa 2.5s infinite;
+}
+.header-wa-btn:hover { background-color: var(--wa-green); color: var(--bg); }
+@keyframes pulse-wa {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+@media (max-width: 768px) {
+  header { padding: 12px 20px; }
+  /* En vertical: solo números 1-4, con área táctil cómoda */
+  .nav-links { display: flex; gap: 20px; }
+  .nav-links a { padding: 8px 6px; font-size: 1.05rem; }
+  .nav-num { display: inline; font-weight: 700; }
+  .nav-label { display: none; }
+}

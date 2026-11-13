@@ -1,0 +1,41 @@
+:root {
+  --bg: #000000;           /* Fondo negro puro */
+  --surface: #0A0A0A;      /* Superficie de tarjetas */
+  --surface-hover: #141414;
+  --border: #222222;       /* Bordes */
+  --text: #F5F5F5;         /* Texto blanco roto */
+  --muted: #888888;        /* Texto secundario */
+  --accent: #E8B14C;       /* Acento amarillo */
+  --wa-green: #25D366;     /* Verde WhatsApp */
+  --progress: 0;           /* Progreso de scroll del Hero (0 → 1) */
+}
+
+/* --- Noto Sans (variable, pesos 100-900 en un solo archivo) --- */
+/* Doble src: algunos navegadores móviles viejos rechazan 'woff2-variations';
+   el segundo intento con 'woff2' plano garantiza la carga. */
+/* Ruta ABSOLUTA con el base del proyecto: en dev el CSS viaja como <style>
+   (una ruta relativa resolvería contra la URL de la página y daría 404),
+   y en producción /luisvfx.ai/fonts/ existe igual gracias a `base`. */
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('/luisvfx.ai/fonts/NotoSans-Variable.woff2') format('woff2-variations'),
+       url('/luisvfx.ai/fonts/NotoSans-Variable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Noto Sans', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* --- Ajustes recomendados por Lenis (scroll suave) --- */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }

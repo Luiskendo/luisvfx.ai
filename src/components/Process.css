@@ -1,0 +1,24 @@
+/* --- SECCIÓN 3: EL PROCESO (copiado del prototipo) --- */
+.process-section { padding: 100px 20px; background-color: var(--bg); text-align: center; }
+.process-header { margin-bottom: 60px; }
+.process-title { font-size: 2.2rem; font-weight: 700; margin-bottom: 12px; }
+.process-desc { color: var(--muted); font-size: 1.1rem; }
+
+.process-steps {
+  display: flex; flex-direction: column; gap: 40px; max-width: 600px; margin: 0 auto; text-align: left; position: relative;
+}
+.process-steps::before {
+  content: ''; position: absolute; top: 0; bottom: 0; left: 24px; width: 2px; background-color: var(--border); z-index: 1;
+}
+.step { display: flex; align-items: flex-start; gap: 24px; position: relative; z-index: 2; }
+.step-number {
+  width: 50px; height: 50px; background-color: var(--bg); border: 1px solid var(--border);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-weight: 700; color: var(--accent); font-size: 1.1rem; flex-shrink: 0; box-shadow: 0 0 0 4px var(--bg);
+}
+.step-content h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+.step-content p { color: var(--muted); font-size: 1rem; line-height: 1.5; }
+
+@media (max-width: 768px) {
+  .process-title { font-size: 1.8rem; }
+}

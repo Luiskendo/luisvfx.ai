@@ -1,0 +1,42 @@
+/* --- SECCIÓN 1: HERO (reglas del prototipo; a petición: título final más grande,
+     sección más corta y sin el texto "Edito videos con IA...") --- */
+.hero-section { height: 150vh; position: relative; }
+.sticky-container {
+  position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; overflow: hidden;
+}
+.title-group {
+  display: flex; flex-direction: column; align-items: center;
+  transform: translateY(calc(-25vh * var(--progress))); transition: all 0.1s ease-out; z-index: 2;
+}
+.title {
+  font-size: calc(15vw - (7vw * var(--progress))); font-weight: 800;
+  letter-spacing: -0.04em; text-align: center; white-space: nowrap; line-height: 1;
+}
+.hero-subtitle {
+  font-size: 1.2rem; color: var(--accent); font-weight: 500; letter-spacing: 0.05em;
+  margin-top: 12px; text-align: center; opacity: calc(1 - (var(--progress) * 3)); transition: all 0.1s ease-out;
+}
+
+.scroll-indicator {
+  position: absolute; bottom: 40px; display: flex; flex-direction: column; align-items: center; gap: 8px;
+  opacity: calc(1 - (var(--progress) * 10)); z-index: 2; pointer-events: none;
+}
+.scroll-indicator span {
+  font-size: 0.85rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; font-weight: 500;
+}
+.arrow {
+  width: 10px; height: 10px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg); animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(45deg); }
+  50% { transform: translateY(8px) rotate(45deg); }
+}
+@media (max-width: 768px) {
+  .hero-subtitle { font-size: 1rem; }
+  /* Título más grande en vertical: 21.5vw al inicio → 12vw al final */
+  .title { font-size: calc(21.5vw - (9.5vw * var(--progress))); }
+  /* En celular (vertical y horizontal): subir el indicador desde el borde */
+  .scroll-indicator { bottom: 112px; }
+}

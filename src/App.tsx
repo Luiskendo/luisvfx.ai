@@ -1,0 +1,36 @@
+import { useEffect } from 'react'
+import Lenis from 'lenis'
+import Cursor from './components/Cursor'
+import Header from './components/Header'
+import Hero from './components/Hero'
+import About from './components/About'
+import TechStrip from './components/TechStrip'
+import Process from './components/Process'
+import Portfolio from './components/Portfolio'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
+
+export default function App() {
+  // Scroll suave global con Lenis (raf automático, se destruye al desmontar)
+  useEffect(() => {
+    const lenis = new Lenis({ autoRaf: true })
+    return () => lenis.destroy()
+  }, [])
+
+  // El orden de las secciones replica el prototipo aprobado
+  return (
+    <>
+      <Cursor />
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <TechStrip />
+        <Process />
+        <Portfolio />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  )
+}
