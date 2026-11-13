@@ -71,10 +71,23 @@ public/          — logo.jpg, logo.ico + logos tech (rutas via import.meta.env.
 - `npm run build` → tsc + vite build; verificar que pase limpio.
 - `npm run preview` → sirve `dist/` con el base.
 
-## Deploy (pendiente de ejecutar)
-- Repo: https://github.com/Luiskendo/luisvfx.ai
-- `vite.config.ts` tiene `base: '/luisvfx.ai/'` → URL final
-  `https://luiskendo.github.io/luisvfx.ai/`.
-- FALTA: `git init`, primer commit, workflow de GitHub Pages. La carpeta NO es repo git.
+## Deploy (EN VIVO — hecho 2026-11-13)
+- Repo: https://github.com/Luiskendo/luisvfx.ai (público, se subió con PAT del
+  usuario — para push de cambios al workflow se requiere permiso "Workflows:
+  Read and write" en el token).
+- `vite.config.ts` tiene `base: '/luisvfx.ai/'` → URL en producción:
+  **https://luiskendo.github.io/luisvfx.ai/** (y `/privacidad.html`).
+- Deploy automático: `.github/workflows/deploy.yml` corre con cada push a `main`.
+  Requiere una vez: Settings → Pages → Source: "GitHub Actions" (ya configurado).
+- La carpeta ES un repo git (rama `main`; remoto `origin` = el repo de GitHub).
+- Flujo para publicar cambios: editar → `git add -A && git commit -m "..." && git push`.
+- Verificado en producción (200 OK): home, privacidad, fuente, logo.
 - Al probar cambios en el celular: cerrar la pestaña y reabrir (caché agresiva);
   confirmar que se ven los números 1-4 del menú = CSS nuevo cargado.
+
+## Marketing / link
+- El link del sitio se comparte tal cual (`luiskendo.github.io/luisvfx.ai`) —
+  **NO usar acortadores**: se ven menos profesionales, generan desconfianza y
+  pueden morir rompiendo todos los perfiles donde esté pegado.
+- Upgrade futuro opcional: comprar el dominio `luisvfx.ai` (~$12 USD/año) y
+  conectarlo en Settings → Pages (campo "Custom domain").
