@@ -1,7 +1,9 @@
 import './About.css'
+import TechStrip from './TechStrip'
 
 /**
  * Sección "¿Quién soy?" con la estrella IA (SVG y animaciones del prototipo).
+ * La tira de tecnología vive dentro de esta sección, debajo de la estrella.
  */
 export default function About() {
   return (
@@ -12,7 +14,6 @@ export default function About() {
           <p className="about-text">
             Soy <span className="highlight">Luis</span>, creador de luisvfx.ai. Uso Inteligencia Artificial para que el contenido de tu academia se vea como una producción de cine, sin que tengas que grabar un solo video ni gastar en equipos costosos.
           </p>
-          <div className="tech-badge">Motor de render: Remotion + IA</div>
         </div>
 
         <div className="visual-star">
@@ -39,6 +40,8 @@ export default function About() {
           </svg>
         </div>
       </div>
+
+      <TechStrip />
     </section>
   )
 }

@@ -11,10 +11,10 @@
 .about-title span { color: var(--accent); }
 .about-text { font-size: 1.2rem; color: var(--muted); line-height: 1.6; margin-bottom: 24px; }
 .highlight { color: var(--text); font-weight: 600; }
-.tech-badge {
-  display: inline-block; font-size: 0.8rem; color: var(--muted); letter-spacing: 0.05em;
-  text-transform: uppercase; border: 1px solid var(--border); padding: 6px 12px; border-radius: 20px;
-}
+
+/* La tira de tech (TechStrip) vive dentro de Quién soy: full-bleed y
+   pegada al borde inferior, con el color de la sección (transparente). */
+.about-section .tech-strip { margin: 16px -20px -80px; background: transparent; }
 
 /* ESTRELLA IA */
 .visual-star {

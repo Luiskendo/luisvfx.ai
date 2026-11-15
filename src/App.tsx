@@ -4,7 +4,6 @@ import Cursor from './components/Cursor'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import About from './components/About'
-import TechStrip from './components/TechStrip'
 import Process from './components/Process'
 import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
@@ -25,7 +24,6 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <TechStrip />
         <Process />
         <Portfolio />
         <Contact />
