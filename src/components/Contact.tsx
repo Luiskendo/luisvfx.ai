@@ -16,6 +16,7 @@ export default function Contact() {
           rel="noopener noreferrer"
         >
           Reservar mi espacio
+          <img className="wa-btn-icon" src={`${import.meta.env.BASE_URL}whatsapp.png`} alt="" />
         </a>
       </div>
     </section>

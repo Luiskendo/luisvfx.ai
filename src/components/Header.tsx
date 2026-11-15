@@ -53,6 +53,7 @@ export default function Header() {
         rel="noopener noreferrer"
       >
         Hablemos
+        <img className="header-wa-icon" src={`${import.meta.env.BASE_URL}whatsapp.png`} alt="" />
       </a>
     </header>
   )
