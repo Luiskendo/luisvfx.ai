@@ -40,3 +40,10 @@
   /* En celular (vertical y horizontal): subir el indicador desde el borde */
   .scroll-indicator { bottom: 112px; }
 }
+/* Solo celular vertical: hero más corto para que "Quién soy" llegue antes
+   (a 90vh la sección no llega a "sostener" el título: sube y encoge de una) */
+@media (max-width: 768px) and (orientation: portrait) {
+  .hero-section { height: 90vh; }
+  /* Título y subtítulo arrancan 7vh más arriba (misma animación de subida) */
+  .title-group { transform: translateY(calc(-25vh * var(--progress) - 7vh)); }
+}
