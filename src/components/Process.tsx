@@ -28,16 +28,30 @@ export default function Process() {
         <h2 className="process-title">Así de fácil es trabajar conmigo</h2>
         <p className="process-desc">Tú te enfocas en enseñar. Yo me encargo de la producción.</p>
       </div>
-      <div className="process-steps">
-        {STEPS.map((step) => (
-          <div className="step" key={step.number}>
-            <div className="step-number">{step.number}</div>
-            <div className="step-content">
-              <h3>{step.title}</h3>
-              <p>{step.text}</p>
+      <div className="process-body">
+        <div className="process-steps">
+          {STEPS.map((step) => (
+            <div className="step" key={step.number}>
+              <div className="step-number">{step.number}</div>
+              <div className="step-content">
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
+              </div>
             </div>
+          ))}
+        </div>
+        <div className="process-video">
+          <p className="process-video-label">Te muestro un ejemplo</p>
+          <div className="process-video-frame">
+            <iframe
+              src="https://player.vimeo.com/video/1248182435"
+              title="Video de ejemplo"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowFullScreen
+            />
           </div>
-        ))}
+        </div>
       </div>
     </section>
   )

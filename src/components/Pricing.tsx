@@ -70,19 +70,19 @@ export default function Pricing() {
             <ul className="pricing-features">
               <li>
                 <CheckIcon />
-                Guiones
+                4 videos HD
               </li>
               <li>
                 <CheckIcon />
-                Efectos de sonido
+                Guion y locución IA
               </li>
               <li>
                 <CheckIcon />
-                {pkg.changes}
+                Animación 2D
               </li>
               <li>
                 <CheckIcon />
-                Configurable a tu estilo
+                Hasta 3 ajustes por video
               </li>
             </ul>
             <a

@@ -21,6 +21,10 @@ aprobado por el cliente. Destino: GitHub Pages (project page).
   4. En móvil el menú muestra números 1-5 en vez de desaparecer.
   5. Glow blanco sutil en el logo del header.
   6. Fuente Noto Sans fija (ver abajo) en vez de system-ui.
+  7. En Proceso, los pasos van a la izquierda y a la derecha un video de ejemplo
+     de Vimeo (1248182435, vertical HD) con etiqueta "Te muestro un ejemplo".
+  8. En Paquetes, todas las tarjetas usan los mismos checks: "4 videos HD",
+     "Guion y locución IA", "Animación 2D", "Hasta 3 ajustes por video".
 - El cliente prefiere que se le **pregunte** antes de asumir decisiones visuales.
 
 ## Paleta (vars de `src/index.css`)
