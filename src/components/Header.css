@@ -48,7 +48,7 @@ header.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
 @media (max-width: 768px) {
   header { padding: 12px 20px; }
   /* En vertical: solo números 1-4, con área táctil cómoda */
-  .nav-links { display: flex; gap: 20px; }
+  .nav-links { display: flex; gap: 12px; }
   .nav-links a { padding: 8px 6px; font-size: 1.05rem; }
   .nav-num { display: inline; font-weight: 700; }
   .nav-label { display: none; }
