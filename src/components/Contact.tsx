@@ -7,8 +7,8 @@ export default function Contact() {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-card">
-        <h2 className="contact-title">¿Te interesa?</h2>
-        <p className="contact-text">Reserva tu espacio. Estoy listo para escuchar tus ideas y armar el plan perfecto para tu academia.</p>
+        <h2 className="contact-title">¿Alguna pregunta?</h2>
+        <p className="contact-text">Agenda tu espacio. Revisamos tus ideas y armamos el plan ideal para tu academia.</p>
         <a
           className="wa-btn-bottom"
           href="https://wa.me/573123867687?text=Hola%2C%20quiero%20reservar%20mi%20espacio%20en%20luisvfx.ai"
