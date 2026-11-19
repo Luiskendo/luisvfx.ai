@@ -10,7 +10,7 @@
 .process-steps {
   display: flex; flex-direction: column; gap: 40px; flex: 1; min-width: 0; position: relative;
 }
-.process-video { flex: 1; min-width: 0; }
+.process-video { flex: 1; min-width: 0; text-align: center; }
 .process-video-label {
   color: var(--text); font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; text-align: center;
 }
@@ -34,6 +34,8 @@
 
 @media (max-width: 768px) {
   .process-title { font-size: 1.8rem; }
-  .process-body { flex-direction: column; }
-  .process-steps { max-width: 100%; }
+  .process-body { flex-direction: column; align-items: center; }
+  .process-steps { max-width: 100%; text-align: left; }
+  .process-video { width: 100%; display: flex; flex-direction: column; align-items: center; }
+  .process-video-frame { margin: 0 auto; }
 }
