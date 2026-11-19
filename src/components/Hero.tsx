@@ -11,7 +11,7 @@ import './Hero.css'
  * Hero con animación ligada al scroll (replica el prototipo):
  * - El título se achica (15vw → 8vw) y sube (25vh) mientras se scrollea.
  * - El subtítulo amarillo se desvanece al scrollear.
- * - Sin texto secundario: el título es lo único que se muestra aquí.
+ * - El título es el protagonista; el subtítulo acompaña y desaparece al scrollear.
  *
  * El CSS es exactamente el del prototipo: las reglas calculan sobre la
  * variable --progress. Framer Motion calcula esa variable con `useScroll`
