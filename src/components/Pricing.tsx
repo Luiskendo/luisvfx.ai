@@ -80,6 +80,10 @@ export default function Pricing() {
                 <CheckIcon />
                 {pkg.changes}
               </li>
+              <li>
+                <CheckIcon />
+                Configurable a tu estilo
+              </li>
             </ul>
             <a
               className={`pricing-btn ${pkg.popular ? 'pricing-btn--filled' : 'pricing-btn--outline'}`}
