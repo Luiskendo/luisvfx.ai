@@ -146,10 +146,15 @@
 @media (max-width: 768px) {
   .cards-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .card { height: 200px; }
+  .card--client { height: 200px; }
   .placeholder-icon { font-size: 2rem; }
   .placeholder-text { font-size: 0.7rem; }
   .card-badge { font-size: 0.6rem; padding: 4px 8px; }
   .portfolio-title { font-size: 1.8rem; }
+  .card--client .client-thumb { width: 56px; height: 56px; margin-bottom: 6px; }
+  .card--client .placeholder-text { font-size: 0.8rem; }
+  .card--client .client-sector { font-size: 0.7rem; }
+  .card--client .client-cta-hint { font-size: 0.65rem; padding-top: 6px; padding-bottom: 6px; }
   .client-modal { padding: 20px 16px; }
   .client-modal-body { flex-direction: column; }
   .client-modal-video--vertical { flex: none; width: 100%; max-width: 220px; margin: 0 auto; }

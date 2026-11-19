@@ -7,15 +7,48 @@
 }
 .title-group {
   display: flex; flex-direction: column; align-items: center;
-  transform: translateY(calc(-25vh * var(--progress))); transition: all 0.1s ease-out; z-index: 2;
+  transform: translateY(0); transition: all 0.1s ease-out; z-index: 2;
+  opacity: calc(1 - (var(--progress) * 2));
+  filter: blur(calc(var(--progress) * 8px));
+}
+.title-reveal-wrap {
+  overflow: hidden; display: inline-block; max-width: 100%;
 }
 .title {
   font-size: calc(15vw - (7vw * var(--progress))); font-weight: 800;
   letter-spacing: -0.04em; text-align: center; white-space: nowrap; line-height: 1;
+  background: linear-gradient(90deg, var(--text) 0%, #F5D28A 50%, var(--text) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+  animation: titleReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+            shimmer 4s linear 1.4s infinite;
+  -webkit-mask-image: linear-gradient(to right, black 0%, black calc((1 - var(--progress)) * 100%), transparent calc((1 - var(--progress)) * 100% + 15%));
+  mask-image: linear-gradient(to right, black 0%, black calc((1 - var(--progress)) * 100%), transparent calc((1 - var(--progress)) * 100% + 15%));
+}
+@keyframes titleReveal {
+  from { opacity: 0; transform: translateY(0.4em) scale(0.7); filter: blur(10px); clip-path: inset(0 100% 0 0); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); clip-path: inset(0 0 0 0); }
+}
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.hero-subtitle-wrap {
+  opacity: 0;
+  transform: translateY(0.6em);
+  animation: subtitleWrapReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0s forwards;
 }
 .hero-subtitle {
   font-size: 1.2rem; color: var(--accent); font-weight: 500; letter-spacing: 0.05em;
-  margin-top: 12px; text-align: center; opacity: calc(1 - (var(--progress) * 3)); transition: all 0.1s ease-out;
+  margin-top: 12px; text-align: center;
+  opacity: calc(1 - (var(--progress) * 3));
+  transition: all 0.1s ease-out;
+}
+@keyframes subtitleWrapReveal {
+  from { opacity: 0; transform: translateY(0.4em) scale(0.7); filter: blur(8px); }
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
 }
 
 .scroll-indicator {
@@ -43,7 +76,18 @@
 /* Solo celular vertical: hero más corto para que "Quién soy" llegue antes
    (a 90vh la sección no llega a "sostener" el título: sube y encoge de una) */
 @media (max-width: 768px) and (orientation: portrait) {
-  .hero-section { height: 90vh; }
-  /* Título y subtítulo arrancan 7vh más arriba (misma animación de subida) */
-  .title-group { transform: translateY(calc(-25vh * var(--progress) - 7vh)); }
+  .hero-section { height: 150vh; }
+  /* Título centrado: escala + blur + fade más marcados para que el efecto se note */
+  .title-group {
+    transform: scale(calc(1 - (var(--progress) * 0.12)));
+    opacity: calc(1 - (var(--progress) * 2.2));
+    filter: blur(calc(var(--progress) * 10px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title { animation: none; background: none; color: var(--text); opacity: 1; transform: none; clip-path: none; }
+  .hero-subtitle-wrap { animation: none; opacity: 1; transform: none; }
+  .hero-subtitle { opacity: calc(1 - (var(--progress) * 3)); }
+  .arrow { animation: none; }
 }

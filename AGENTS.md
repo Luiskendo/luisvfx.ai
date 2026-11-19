@@ -47,10 +47,15 @@ src/
     Header.tsx   — aparece a scrollY > 50vh; resalta sección activa (main section[id]);
                    móvil: números 1-5 (.nav-num), escritorio: texto (.nav-label)
     Hero.tsx     — título sticky que encoge y sube con el scroll:
-                   `--progress` via useScroll + useSpring + useMotionValueEvent
+                   `--progress` via useScroll + useSpring + useMotionValueEvent.
+                   Animación de entrada (blur/scale/clip-path wipe) y de scroll
+                   (blur/fade/mask wipe) viven en Hero.css; no "simplificar".
     About/ Process/ Portfolio/ Pricing/ Contact/ TechStrip/ Footer/
+    (Portfolio incluye tarjeta de cliente destacado "Bombillo Prieto" con modal:
+     video embebido de Vimeo, enlaces web/redes y CTA a WhatsApp.)
     PrivacyPage/ — Aviso de Privacidad (página aparte, ver "Multi-página")
-public/          — logo.jpg, logo.ico + logos tech (rutas via import.meta.env.BASE_URL)
+public/          — logo.jpg, logo.ico + logos tech + bombillo_prieto.jpeg, facebook.webp,
+                   instagram.png (rutas via import.meta.env.BASE_URL)
 ```
 - **Multi-página (Vite)**: `index.html` (landing) + `privacidad.html` (aviso de
   privacidad), declarados en `vite.config.ts` → `rollupOptions.input`. La página de
@@ -59,7 +64,7 @@ public/          — logo.jpg, logo.ico + logos tech (rutas via import.meta.env.
   `${import.meta.env.BASE_URL}` (volver). URL final:
   `https://luiskendo.github.io/luisvfx.ai/privacidad.html`.
   El aviso declara que NO se recopilan datos (sin cookies/analítica), terceros
-  (WhatsApp, Instagram, TikTok, GitHub Pages), derechos ARCO (Ley 1581/2012) y cambios.
+  (WhatsApp, Instagram, Facebook, TikTok, Vimeo, GitHub Pages), derechos ARCO (Ley 1581/2012) y cambios.
 - Anclas de navegación: `#about`, `#process`, `#portfolio`, `#paquetes`, `#contact`
   (Hero y TechStrip sin link en el menú, igual que el prototipo).
 - Móvil (<768px): título Hero `calc(21.5vw - 9.5vw*progress)`, indicador

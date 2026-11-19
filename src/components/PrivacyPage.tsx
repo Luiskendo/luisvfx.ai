@@ -58,13 +58,17 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2>4. Enlaces externos y alojamiento</h2>
+          <h2>4. Enlaces externos, videos embebidos y alojamiento</h2>
           <p>
-            Los enlaces a Instagram y TikTok te llevan a plataformas de terceros con sus propias
-            políticas de privacidad. Este sitio está alojado en <strong>GitHub Pages</strong>; GitHub
-            puede registrar datos técnicos estándar de las visitas conforme a{' '}
+            Los enlaces a Instagram, Facebook y TikTok te llevan a plataformas de terceros con sus
+            propias políticas de privacidad. El video que aparece en el portafolio se reproduce
+            desde los servidores de <strong>Vimeo</strong> (incrustado mediante un iframe); Vimeo
+            puede registrar datos técnicos de la reproducción conforme a{' '}
+            <a href="https://vimeo.com/privacy" target="_blank" rel="noopener noreferrer">su política de privacidad</a>.
+            Eso ocurre en su infraestructura y está fuera del control de este sitio. Este sitio está
+            alojado en <strong>GitHub Pages</strong>; GitHub puede registrar datos técnicos estándar
+            de las visitas conforme a{' '}
             <a href="https://docs.github.com/es/site-policy/github-privacy-statement" target="_blank" rel="noopener noreferrer">su declaración de privacidad</a>.
-            Eso ocurre en su infraestructura y está fuera del control de este sitio.
           </p>
         </section>
 

@@ -29,7 +29,7 @@ export default function Hero() {
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
-  const progress = useTransform(scrollY, [0, viewportH], [0, 1])
+  const progress = useTransform(scrollY, [0, viewportH * 1.5], [0, 1])
   const smoothProgress = useSpring(progress, {
     stiffness: 180,
     damping: 32,
@@ -52,8 +52,12 @@ export default function Hero() {
     <div className="hero-section">
       <div className="sticky-container">
         <div className="title-group">
-          <h1 className="title">luisvfx.ai</h1>
-          <p className="hero-subtitle">Videos con IA para potenciar tu academia.</p>
+          <div className="title-reveal-wrap">
+            <h1 className="title">luisvfx.ai</h1>
+          </div>
+          <div className="hero-subtitle-wrap">
+            <p className="hero-subtitle">Videos con IA para potenciar tu academia.</p>
+          </div>
         </div>
         <div className="scroll-indicator">
           <span>Desliza hacia abajo</span>
