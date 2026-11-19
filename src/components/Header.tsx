@@ -6,7 +6,8 @@ const NAV_LINKS = [
   { href: '#about', label: 'Quién soy', num: 1 },
   { href: '#process', label: 'Proceso', num: 2 },
   { href: '#portfolio', label: 'Portafolio', num: 3 },
-  { href: '#contact', label: 'Contacto', num: 4 },
+  { href: '#paquetes', label: 'Paquetes', num: 4 },
+  { href: '#contact', label: 'Contacto', num: 5 },
 ]
 
 /**
