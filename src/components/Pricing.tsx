@@ -5,8 +5,8 @@ const PACKAGES = [
     name: 'Lite',
     price: '$50',
     perVideo: '$12.50',
-    quantity: '4 videos al mes',
-    changes: '3 cambios por video',
+    videos: 4,
+    adjustments: 3,
     url: 'https://wa.me/573123867687?text=Hola%2C%20quiero%20el%20paquete%20Lite%20(4%20videos%20-%20%2450)',
     popular: false,
   },
@@ -14,8 +14,8 @@ const PACKAGES = [
     name: 'Pro',
     price: '$85',
     perVideo: '$10.63',
-    quantity: '8 videos al mes',
-    changes: '5 cambios por video',
+    videos: 8,
+    adjustments: 5,
     url: 'https://wa.me/573123867687?text=Hola%2C%20quiero%20el%20paquete%20Pro%20(8%20videos%20-%20%2485)',
     popular: true,
   },
@@ -23,8 +23,8 @@ const PACKAGES = [
     name: 'Max',
     price: '$150',
     perVideo: '$9.38',
-    quantity: '16 videos al mes',
-    changes: '8 cambios por video',
+    videos: 16,
+    adjustments: 8,
     url: 'https://wa.me/573123867687?text=Hola%2C%20quiero%20el%20paquete%20Max%20(16%20videos%20-%20%24150)',
     popular: false,
   },
@@ -66,23 +66,27 @@ export default function Pricing() {
               <span className="pricing-price">{pkg.price}</span>
               <span className="pricing-period"> /mes</span>
             </div>
-            <p className="pricing-quantity">{pkg.quantity}</p>
+            <p className="pricing-quantity">{pkg.videos} videos al mes</p>
             <ul className="pricing-features">
               <li>
                 <CheckIcon />
-                4 videos HD
+                {pkg.videos} videos HD
               </li>
               <li>
                 <CheckIcon />
-                Guion y locución IA
+                Hasta {pkg.adjustments} ajustes por video
+              </li>
+              <li>
+                <CheckIcon />
+                Guion
+              </li>
+              <li>
+                <CheckIcon />
+                Locución IA
               </li>
               <li>
                 <CheckIcon />
                 Animación 2D
-              </li>
-              <li>
-                <CheckIcon />
-                Hasta 3 ajustes por video
               </li>
             </ul>
             <a

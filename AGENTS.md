@@ -23,8 +23,10 @@ aprobado por el cliente. Destino: GitHub Pages (project page).
   6. Fuente Noto Sans fija (ver abajo) en vez de system-ui.
   7. En Proceso, los pasos van a la izquierda y a la derecha un video de ejemplo
      de Vimeo (1248182435, vertical HD) con etiqueta "Te muestro un ejemplo".
-  8. En Paquetes, todas las tarjetas usan los mismos checks: "4 videos HD",
-     "Guion y locución IA", "Animación 2D", "Hasta 3 ajustes por video".
+  8. En Paquetes, cada tarjeta muestra su propia cantidad de videos (4/8/16)
+     y ajustes por video (3/5/8); los checks se ordenan con la cantidad de
+     videos arriba y los ajustes justo debajo; "Guion y locución IA" se separa
+     en dos checks: "Guion" y "Locución IA".
 - El cliente prefiere que se le **pregunte** antes de asumir decisiones visuales.
 
 ## Paleta (vars de `src/index.css`)
