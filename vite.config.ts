@@ -12,6 +12,8 @@ export default defineConfig({
       input: {
         main: 'index.html',
         privacidad: 'privacidad.html',
+        guiones: 'guiones/index.html',
+        guionesBombilloPrieto: 'guiones/bombillo_prieto/index.html',
       },
     },
   },

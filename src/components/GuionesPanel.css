@@ -1,0 +1,141 @@
+/* --- PANEL PRIVADO DE GUIONES (misma estética: negro + amarillo) --- */
+.guion-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--bg);
+}
+
+.guion-main {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: 24px 24px 32px;
+}
+
+/* Sin cuadro: el contenido ocupa todo el ancho disponible */
+.guion-panel {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 120px);
+}
+
+/* Logo circular con el mismo glow del header */
+.guion-logo {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  border: 1px solid var(--border);
+  filter: drop-shadow(0 0 6px rgba(245, 245, 245, 0.35))
+          drop-shadow(0 0 14px rgba(245, 245, 245, 0.15));
+  margin: 100px auto 24px;
+  display: block;
+}
+
+.guion-kicker {
+  color: var(--accent);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.guion-title {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text);
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+  background: linear-gradient(90deg, var(--text) 0%, #F5D28A 50%, var(--text) 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: guionTitleReveal 1.4s cubic-bezier(0.16, 1, 0.3, 1) forwards,
+             guionShimmer 4s linear 1.4s infinite;
+}
+
+@keyframes guionTitleReveal {
+  from { opacity: 0; transform: translateY(0.4em) scale(0.7); filter: blur(10px); clip-path: inset(0 100% 0 0); }
+  to   { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); clip-path: inset(0 0 0 0); }
+}
+@keyframes guionShimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.guion-footer {
+  padding: 24px 40px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  order: 5;
+}
+.guion-footer p { color: var(--muted); font-size: 0.85rem; }
+.guion-back {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.guion-back:hover { color: var(--text); }
+
+/* Lista de guiones: grilla responsiva que escala a muchos elementos */
+.guion-list {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.guion-btn {
+  padding: 16px 20px;
+  background-color: transparent;
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+.guion-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background-color: rgba(232, 177, 76, 0.06);
+  transform: translateY(-1px);
+}
+.guion-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .guion-panel { padding: 40px 20px; }
+  .guion-logo { width: 88px; height: 88px; }
+  .guion-footer { padding: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .guion-title { animation: none; background: none; color: var(--text); opacity: 1; transform: none; clip-path: none; }
+}
