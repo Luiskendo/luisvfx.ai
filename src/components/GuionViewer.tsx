@@ -40,21 +40,18 @@ export default function GuionViewer({ guion, onBack }: Props) {
       <p className="guion-step-counter guion-step-counter--corner">
         Paso {step + 1} de {total}
       </p>
-      <p className="guion-kicker guion-kicker--title">Guion de ejemplo</p>
+      <h1 id="guion-viewer-title" className="guion-kicker guion-kicker--title">
+        {guion.title}
+      </h1>
       <hr className="guion-divider" />
       <main className="guion-main">
         <section className="guion-panel" aria-labelledby="guion-viewer-title">
           <div className="guion-step">
             {step === 0 && (
-              <>
-                <h1 id="guion-viewer-title" className="guion-title guion-title--static">
-                  <span className="guion-idea-inline">Título:</span> {guion.title}
-                </h1>
-                <div className="guion-meta">
-                  <p><span className="guion-label">Duración:</span> {guion.duracion}</p>
-                  <p><span className="guion-label">Formato:</span> {guion.formato}</p>
-                </div>
-              </>
+              <div className="guion-meta">
+                <p><span className="guion-label">Duración:</span> {guion.duracion}</p>
+                <p><span className="guion-label">Formato:</span> {guion.formato}</p>
+              </div>
             )}
 
             {step >= 1 && step <= guion.escenas.length && (
