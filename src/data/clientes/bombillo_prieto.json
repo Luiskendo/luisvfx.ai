@@ -1,5 +1,40 @@
 {
   "clientName": "Bombillo Prieto",
   "logoSrc": "/luisvfx.ai/bombillo_prieto.jpeg",
-  "guiones": []
+  "guiones": [
+    {
+      "id": "test_de_nivel_de_espanol_prueba_de_jerga_y_ruta_desde_la_biografia",
+      "title": "TEST DE NIVEL DE ESPAÑOL · PRUEBA DE JERGA Y RUTA DESDE LA BIOGRAFÍA",
+      "duracion": "30s-45s (84 Palabras en ingles)",
+      "formato": "Vertical 9:16 Instagram/TikTok",
+      "escenas": [
+        {
+          "label": "Escena 1 (Gancho)",
+          "locucion": "Most folks swear they know Spanish — until they hit the slang questions.",
+          "visual": "Al decir \"Most folks swear they know Spanish\" aparece un grupo de personas con signos de interrogación, y luego en pantalla van saliendo palabras de jerga de República Dominicana como \"qué lo qué\"."
+        },
+        {
+          "label": "Escena 2",
+          "locucion": "On paper everything looks easy when a word only gets one flat meaning. In real talk, people shift the tone, drop letters, and throw out expressions no textbook ever puts in front of you. That’s when you feel the gap between knowing basic Spanish and actually catching what’s going down in the convo.",
+          "visual": "Se ve un papel donde un lápiz escribe la palabra \"vaina\" con un significado fijo y simple; luego desaparecen el papel y el lápiz para dejar \"vaina\" en primer plano, cambiando de tono, perdiendo letras y deformándose al ritmo de la conversación real mientras se marca el choque entre lo básico y la calle."
+        },
+        {
+          "label": "Escena 3",
+          "locucion": "That’s why the Bombillo Prieto test starts by asking what level you think you are — from Zero Hero to Advanced — and how many questions you want, from ten to fifty.",
+          "visual": "El logo de Bombillo Prieto se enciende y da paso a las opciones de nivel —de Zero Hero hasta Advanced— y luego a los números de preguntas —de 10 a 50—, cada uno marcándose con un pulso o golpe visual al ritmo de lo que dice la voz."
+        },
+        {
+          "label": "Escena 4",
+          "locucion": "To jump in, hit the link in bio, open the Bombillo Prieto page, and tap the level test button to go straight into the quiz.",
+          "visual": "En una grabación de pantalla limpia se ve el toque en el enlace de la biografía, la carga de la página de Bombillo Prieto y el clic en el botón de prueba tu nivel con un marcador visual que guía la vista hasta entrar directo al test."
+        },
+        {
+          "label": "Escena 5 (Prueba y Cierre)",
+          "locucion": "Pick your level and your pace, run the test, and see if what you think matches reality — dímelo.",
+          "visual": "Se ve a alguien eligiendo su nivel y ritmo para arrancar la prueba, el marcador salta comparando lo que creía saber con su resultado real y cierra con el logo de Bombillo prieto."
+        }
+      ],
+      "cierre": "Pick your level and your pace, run the test, and see if what you think matches reality — dímelo."
+    }
+  ]
 }
